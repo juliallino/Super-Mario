@@ -1,7 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://ddrh6bv1u070v"]
+[gd_scene format=3 uid="uid://ddrh6bv1u070v"]
 
 [ext_resource type="Texture2D" uid="uid://cnhgp5cuyq1fy" path="res://Assets/enemies/Goomba_Flat.png" id="1_0cfan"]
-[ext_resource type="Script" path="res://cenes/goomba.gd" id="1_kcixu"]
+[ext_resource type="Script" uid="uid://2oi8puy3dpsp" path="res://cenes/goomba.gd" id="1_kcixu"]
 [ext_resource type="Texture2D" uid="uid://ipnak52sqkfm" path="res://Assets/enemies/Goomba_Walk1.png" id="2_7hsgj"]
 [ext_resource type="Texture2D" uid="uid://db1ik4up16coc" path="res://Assets/enemies/Goomba_Walk2.png" id="3_eu8i0"]
 
@@ -30,26 +30,30 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iesnr"]
 size = Vector2(16, 16)
 
-[node name="Goomba" type="Area2D"]
+[node name="Goomba" type="Area2D" unique_id=1549919603]
 collision_layer = 4
 collision_mask = 9
 script = ExtResource("1_kcixu")
-horizontal_speed = null
-vertical_speed = null
+horizontal_speed = -20.0
+vertical_speed = 20.0
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2099041341]
 sprite_frames = SubResource("SpriteFrames_xmq3l")
 animation = &"walk"
 autoplay = "walk"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1611890925]
 shape = SubResource("RectangleShape2D_iesnr")
 
-[node name="RayCast2D" type="RayCast2D" parent="."]
-target_position = Vector2(0, 8)
+[node name="RayCastFloor" type="RayCast2D" parent="." unique_id=1440245432]
+target_position = Vector2(0, 20)
 collision_mask = 18
 
-[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+[node name="RayCastEdge" type="RayCast2D" parent="." unique_id=509807381]
+target_position = Vector2(-20, 20)
+collision_mask = 18
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1047651114]
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
