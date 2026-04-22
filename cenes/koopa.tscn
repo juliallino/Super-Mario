@@ -1,16 +1,15 @@
-[gd_scene format=3 uid="uid://b3a8cle76ueyp"]
+[gd_scene format=3 uid="uid://bqb0c6kmf0qnq"]
 
-[ext_resource type="Script" uid="uid://cmgvuar0aavx1" path="res://cenes/koopa.gd" id="1_k3qn0"]
-[ext_resource type="Texture2D" uid="uid://iluwoo5eicyi" path="res://Assets/enemies/Koopa_Shell.png" id="2_krmul"]
-[ext_resource type="Texture2D" uid="uid://wv4eq6sspap7" path="res://Assets/enemies/Koopa_Walk2.png" id="3_achkc"]
-[ext_resource type="Texture2D" uid="uid://deqxjro85hc5l" path="res://Assets/enemies/Koopa_Walk1.png" id="4_fgx42"]
-[ext_resource type="Shape2D" uid="uid://277x0p3bke46" path="res://Resources/CollisionShapes/koopa_shell.tres" id="5_30r37"]
+[ext_resource type="Script" uid="uid://c5iqxf38bywfh" path="res://cenes/koopa.gd" id="1_ujpvx"]
+[ext_resource type="Texture2D" uid="uid://iluwoo5eicyi" path="res://enemies/enemies/Koopa_Shell.png" id="2_mnx8j"]
+[ext_resource type="Texture2D" uid="uid://deqxjro85hc5l" path="res://enemies/enemies/Koopa_Walk1.png" id="3_ngrbk"]
+[ext_resource type="Texture2D" uid="uid://wv4eq6sspap7" path="res://enemies/enemies/Koopa_Walk2.png" id="4_jvwym"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_rpeiq"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_ipskv"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_krmul")
+"texture": ExtResource("2_mnx8j")
 }],
 "loop": true,
 "name": &"dead",
@@ -18,39 +17,36 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_achkc")
+"texture": ExtResource("3_ngrbk")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_fgx42")
+"texture": ExtResource("4_jvwym")
 }],
 "loop": true,
 "name": &"walk",
 "speed": 5.0
 }]
 
-[node name="Koopa" type="Area2D" unique_id=1228283306]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4p552"]
+size = Vector2(20, 14)
+
+[node name="Koopa" type="Area2D" unique_id=1850952145]
 collision_layer = 4
 collision_mask = 9
-script = ExtResource("1_k3qn0")
+script = ExtResource("1_ujpvx")
+horizontal_speed = null
+vertical_speed = null
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=653415913]
-sprite_frames = SubResource("SpriteFrames_rpeiq")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1979632848]
+sprite_frames = SubResource("SpriteFrames_ipskv")
 animation = &"walk"
 autoplay = "walk"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=201748795]
-position = Vector2(-0.5, -0.5)
-shape = ExtResource("5_30r37")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=475822919]
+shape = SubResource("RectangleShape2D_4p552")
 
-[node name="RayCastFloor" type="RayCast2D" parent="." unique_id=1193333454]
-target_position = Vector2(0, 20)
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=1759318525]
+target_position = Vector2(0, 12)
 collision_mask = 18
 
-[node name="RayCastEdge" type="RayCast2D" parent="." unique_id=830279964]
-target_position = Vector2(-20, 20)
-collision_mask = 18
-
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=205862273]
-
-[connection signal="area_entered" from="." to="." method="_on_area_entered"]
-[connection signal="screen_exited" from="VisibleOnScreenEnabler2D" to="." method="_on_visible_on_screen_enabler_2d_screen_exited"]
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=341288617]

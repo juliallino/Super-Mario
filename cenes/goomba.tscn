@@ -1,15 +1,15 @@
-[gd_scene format=3 uid="uid://ddrh6bv1u070v"]
+[gd_scene format=3 uid="uid://rij630volnqq"]
 
-[ext_resource type="Texture2D" uid="uid://cnhgp5cuyq1fy" path="res://Assets/enemies/Goomba_Flat.png" id="1_0cfan"]
-[ext_resource type="Script" uid="uid://2oi8puy3dpsp" path="res://cenes/goomba.gd" id="1_kcixu"]
-[ext_resource type="Texture2D" uid="uid://ipnak52sqkfm" path="res://Assets/enemies/Goomba_Walk1.png" id="2_7hsgj"]
-[ext_resource type="Texture2D" uid="uid://db1ik4up16coc" path="res://Assets/enemies/Goomba_Walk2.png" id="3_eu8i0"]
+[ext_resource type="Script" uid="uid://bwrtxgnams8l5" path="res://cenes/goomba.gd" id="1_hyo8s"]
+[ext_resource type="Texture2D" uid="uid://cnhgp5cuyq1fy" path="res://enemies/enemies/Goomba_Flat.png" id="2_1hajr"]
+[ext_resource type="Texture2D" uid="uid://ipnak52sqkfm" path="res://enemies/enemies/Goomba_Walk1.png" id="3_oo1d8"]
+[ext_resource type="Texture2D" uid="uid://db1ik4up16coc" path="res://enemies/enemies/Goomba_Walk2.png" id="4_j1h5j"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_xmq3l"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_mmol2"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_0cfan")
+"texture": ExtResource("2_1hajr")
 }],
 "loop": true,
 "name": &"dead",
@@ -17,43 +17,35 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_7hsgj")
+"texture": ExtResource("3_oo1d8")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_eu8i0")
+"texture": ExtResource("4_j1h5j")
 }],
 "loop": true,
 "name": &"walk",
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_iesnr"]
-size = Vector2(16, 16)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qri66"]
 
-[node name="Goomba" type="Area2D" unique_id=1549919603]
+[node name="Goomba" type="Area2D" unique_id=261786767]
 collision_layer = 4
 collision_mask = 9
-script = ExtResource("1_kcixu")
-horizontal_speed = -20.0
-vertical_speed = 20.0
+script = ExtResource("1_hyo8s")
+horizontal_speed = null
+vertical_speed = null
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2099041341]
-sprite_frames = SubResource("SpriteFrames_xmq3l")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2132102780]
+sprite_frames = SubResource("SpriteFrames_mmol2")
 animation = &"walk"
 autoplay = "walk"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1611890925]
-shape = SubResource("RectangleShape2D_iesnr")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1923025977]
+shape = SubResource("RectangleShape2D_qri66")
 
-[node name="RayCastFloor" type="RayCast2D" parent="." unique_id=1440245432]
-target_position = Vector2(0, 20)
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=1734424277]
+target_position = Vector2(0, 8)
 collision_mask = 18
 
-[node name="RayCastEdge" type="RayCast2D" parent="." unique_id=509807381]
-target_position = Vector2(-20, 20)
-collision_mask = 18
-
-[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1047651114]
-
-[connection signal="area_entered" from="." to="." method="_on_area_entered"]
-[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=640600578]
