@@ -15,7 +15,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="Super Mario"
-run/main_scene="res://cenes/main.tscn"
+run/main_scene="uid://dx16dnwnua24h"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 

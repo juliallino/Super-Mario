@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://dx16dnwnua24h"]
+
+[ext_resource type="Script" uid="uid://ciuunne0rs4iu" path="res://menu.gd" id="1_qr26j"]
+[ext_resource type="Texture2D" uid="uid://chqjr2vnd57y4" path="res://menu.png" id="2_68r4c"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yq34a"]
+bg_color = Color(0.96862745, 0.28627452, 0.3019608, 0.9098039)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 20
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qr26j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_68r4c"]
+
+[node name="Menu" type="Node" unique_id=1362493293]
+script = ExtResource("1_qr26j")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=204136606]
+position = Vector2(573.99994, 324)
+scale = Vector2(0.41818178, 0.4205729)
+texture = ExtResource("2_68r4c")
+
+[node name="Start" type="Button" parent="." unique_id=2140730552]
+anchors_preset = -1
+anchor_left = 0.4748264
+anchor_top = 0.5277778
+anchor_right = 0.5234375
+anchor_bottom = 0.5756173
+offset_left = 17.0
+offset_top = 107.0
+offset_right = 17.0
+offset_bottom = 106.99997
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_yq34a")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_qr26j")
+text = "START"
+metadata/_edit_use_anchors_ = true
+
+[node name="Quit" type="Button" parent="." unique_id=2090033858]
+anchors_preset = -1
+anchor_left = 0.4748264
+anchor_top = 0.5277778
+anchor_right = 0.5234375
+anchor_bottom = 0.5756173
+offset_left = 11.0
+offset_top = 178.0
+offset_right = 27.0
+offset_bottom = 188.99997
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_yq34a")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_68r4c")
+text = "QUIT"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
