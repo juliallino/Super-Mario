@@ -4037,8 +4037,14 @@ physics_layer_0/collision_layer = 2
 sources/0 = SubResource("TileSetAtlasSource_2n87t")
 pattern_0 = SubResource("TileMapPattern_2n87t")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hqbtb"]
+size = Vector2(133.5, 594)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l1seo"]
+size = Vector2(65, 440.25)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1hu5f"]
-size = Vector2(5728, 61)
+size = Vector2(5670, 61)
 
 [node name="FaseVinicius" type="Node" unique_id=57697030]
 
@@ -4060,11 +4066,27 @@ limit_left = 0
 limit_top = 0
 limit_bottom = 650
 
+[node name="ParedeInvisivelInicial" type="StaticBody2D" parent="." unique_id=1814470770]
+light_mask = 6
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParedeInvisivelInicial" unique_id=1199782920]
+position = Vector2(-66, 293)
+shape = SubResource("RectangleShape2D_hqbtb")
+
+[node name="ParedeInvisivelFinal" type="StaticBody2D" parent="." unique_id=1080365685]
+light_mask = 6
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParedeInvisivelFinal" unique_id=353323808]
+position = Vector2(5606, 226)
+shape = SubResource("RectangleShape2D_l1seo")
+
 [node name="DeathZone" type="Area2D" parent="." unique_id=1171835102]
 script = ExtResource("3_hqbtb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone" unique_id=790696702]
-position = Vector2(2788, 685)
+position = Vector2(2817, 685)
 shape = SubResource("RectangleShape2D_1hu5f")
 
 [connection signal="body_entered" from="DeathZone" to="Player" method="_on_death_zone_body_entered"]

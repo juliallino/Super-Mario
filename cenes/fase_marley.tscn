@@ -3895,8 +3895,14 @@ tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 2
 sources/0 = SubResource("TileSetAtlasSource_gbo7l")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1x2u4"]
+size = Vector2(133.5, 594)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i2b3f"]
-size = Vector2(6001.25, 61)
+size = Vector2(5710, 61)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kaik6"]
+size = Vector2(65, 509)
 
 [node name="Fase_Marley" type="Node" unique_id=449241453]
 metadata/_edit_horizontal_guides_ = [-1032.0]
@@ -3918,11 +3924,27 @@ limit_left = 0
 limit_top = 0
 limit_bottom = 650
 
+[node name="ParedeInvisivelInicial" type="StaticBody2D" parent="." unique_id=550685249]
+light_mask = 6
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParedeInvisivelInicial" unique_id=264177772]
+position = Vector2(-66, 313)
+shape = SubResource("RectangleShape2D_1x2u4")
+
 [node name="DeathZone" type="Area2D" parent="." unique_id=300774418]
 script = ExtResource("3_1x2u4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone" unique_id=1331932966]
-position = Vector2(2703.375, 710)
+position = Vector2(2849, 710)
 shape = SubResource("RectangleShape2D_i2b3f")
+
+[node name="ParedeInvisivelFinal" type="StaticBody2D" parent="." unique_id=1190075046]
+light_mask = 6
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParedeInvisivelFinal" unique_id=1172379168]
+position = Vector2(6597, 250.5)
+shape = SubResource("RectangleShape2D_kaik6")
 
 [connection signal="body_entered" from="DeathZone" to="Player" method="_on_death_zone_body_entered"]

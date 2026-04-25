@@ -3898,7 +3898,13 @@ physics_layer_0/collision_layer = 2
 sources/2 = SubResource("TileSetAtlasSource_0xm2m")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_awfdv"]
-size = Vector2(6001.25, 61)
+size = Vector2(5694.625, 61)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ypdar"]
+size = Vector2(133.5, 594)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fwmof"]
+size = Vector2(88.5, 695.125)
 
 [node name="FaseIan" type="Node" unique_id=1373668849]
 
@@ -3921,7 +3927,23 @@ limit_bottom = 650
 script = ExtResource("3_ypdar")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone" unique_id=470176677]
-position = Vector2(2694, 781)
+position = Vector2(2847.3125, 781)
 shape = SubResource("RectangleShape2D_awfdv")
+
+[node name="ParedeInvisivelInicial" type="StaticBody2D" parent="." unique_id=1833066814]
+light_mask = 6
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParedeInvisivelInicial" unique_id=1104194805]
+position = Vector2(-66, 293)
+shape = SubResource("RectangleShape2D_ypdar")
+
+[node name="ParedeInvisivelFinal" type="StaticBody2D" parent="." unique_id=1435389532]
+light_mask = 6
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParedeInvisivelFinal" unique_id=1992014511]
+position = Vector2(6199, 350)
+shape = SubResource("RectangleShape2D_fwmof")
 
 [connection signal="body_entered" from="DeathZone" to="Player" method="_on_death_zone_body_entered"]

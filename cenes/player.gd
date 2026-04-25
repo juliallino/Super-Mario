@@ -133,11 +133,3 @@ func die():
 func _on_death_zone_body_entered(body):
 	if body == self and not is_dead:
 		die()
-
-
-func _on_death_zone_area_shape_entered(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
-	pass # Replace with function body.
-
-
-func _on_death_zone_area_entered(area: Area2D) -> void:
-	pass # Replace with function body.
