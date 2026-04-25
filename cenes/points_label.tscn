@@ -1,8 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://cb3vywflse28b"]
+[gd_scene format=3 uid="uid://cjkaqdfxq1e6d"]
 
-[ext_resource type="Script" path="res://cenes/points_label.gd" id="1_pkhe5"]
+[ext_resource type="Script" uid="uid://8v1tbqrlvte6" path="res://cenes/points_label.gd" id="1_pkhe5"]
 
-[node name="PointsLabel" type="Label"]
+[node name="PointsLabel" type="Label" unique_id=1525064497]
 offset_right = 40.0
 offset_bottom = 23.0
 theme_override_font_sizes/font_size = 10

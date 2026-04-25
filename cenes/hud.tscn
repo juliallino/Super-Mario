@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://dyfmm8brhdgc8"]
 
+[ext_resource type="Script" uid="uid://8m8di2kajr4i" path="res://cenes/hud.gd" id="1_41bst"]
 [ext_resource type="Texture2D" uid="uid://coo75u7xx4aaq" path="res://Assets/coracao.png" id="1_qxwqb"]
 
 [node name="HUD" type="CanvasLayer" unique_id=480534163]
+script = ExtResource("1_41bst")
 
 [node name="PainelDurante" type="Node" parent="." unique_id=1132154300]
 
@@ -10,10 +12,10 @@
 anchors_preset = -1
 anchor_right = 0.034722224
 anchor_bottom = 0.03549383
-offset_left = 1049.0
-offset_top = 44.0
-offset_right = 1049.0
-offset_bottom = 44.0
+offset_left = 10.0
+offset_top = 424.0
+offset_right = 10.0
+offset_bottom = 424.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -23,10 +25,14 @@ vertical_alignment = 1
 
 [node name="BoxContainer" type="BoxContainer" parent="PainelDurante" unique_id=372108377]
 anchors_preset = -1
-anchor_left = 0.25694445
-anchor_top = 0.0030864198
-anchor_right = 0.29166666
+anchor_left = 0.2623264
+anchor_top = 0.009259259
+anchor_right = 0.3107639
 anchor_bottom = 0.06481481
+offset_left = -710.0
+offset_top = 410.0
+offset_right = -710.0
+offset_bottom = 410.0
 metadata/_edit_use_anchors_ = true
 
 [node name="Coracao3" type="Sprite2D" parent="PainelDurante/BoxContainer" unique_id=998789098]
@@ -43,3 +49,37 @@ texture = ExtResource("1_qxwqb")
 position = Vector2(774.99994, 24.999998)
 scale = Vector2(2.125009, 1.7226563)
 texture = ExtResource("1_qxwqb")
+
+[node name="PainelFimDeJogo" type="Node" parent="." unique_id=24823182]
+
+[node name="Background" type="ColorRect" parent="PainelFimDeJogo" unique_id=1747446294]
+offset_right = 1153.0
+offset_bottom = 646.0
+color = Color(1, 1, 0.62352943, 0.5411765)
+
+[node name="Menu" type="Button" parent="PainelFimDeJogo" unique_id=1139592568]
+offset_left = 531.0
+offset_top = 376.0
+offset_right = 588.0
+offset_bottom = 407.0
+text = "MENU"
+
+[node name="Reenicia" type="Button" parent="PainelFimDeJogo" unique_id=1753769431]
+offset_left = 493.0
+offset_top = 426.0
+offset_right = 628.0
+offset_bottom = 457.0
+text = "JOGAR DE NOVO"
+
+[node name="Mensagem" type="Label" parent="PainelFimDeJogo" unique_id=1715992308]
+offset_left = 523.0
+offset_top = 308.0
+offset_right = 599.0
+offset_bottom = 345.0
+size_flags_horizontal = 4
+text = "VICTORY !"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="PainelFimDeJogo/Menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="PainelFimDeJogo/Reenicia" to="." method="_on_reenicia_pressed"]

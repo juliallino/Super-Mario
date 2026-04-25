@@ -9,7 +9,6 @@ enum PlayerMode{
 	BIG,
 	SHOOTING
 }
-signal points_scored(points: int)
 const POINTS_LABEL_SCENE = preload("res://cenes/points_label.tscn")
 
 @onready var animated_sprite_2d = $AnimatedSprite2D
@@ -118,7 +117,8 @@ func spawn_points_label(enemy):
 	var points_label = POINTS_LABEL_SCENE.instantiate()
 	points_label.position = enemy.position + Vector2(-20,-20)
 	get_tree().root.add_child(points_label)
-	points_scored.emit(100)
+	GameManager.pontos += 100
+	GameManager.pontos_changed.emit()
 
 func die():
 	if player_mode == PlayerMode.SMALL:
