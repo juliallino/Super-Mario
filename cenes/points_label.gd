@@ -1,12 +1,11 @@
 extends Label
 
+@export var next_scene: String = "res://cenes/fase_vinicius.tscn"
+var player_on_top: Player = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var label_tween = get_tree().create_tween()
-	label_tween.tween_property(self, "position", position + Vector2(0,-10), .4)
-	label_tween.tween_callback(queue_free)
-
+	pass
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass

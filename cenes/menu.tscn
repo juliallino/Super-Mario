@@ -23,8 +23,8 @@ expand_margin_bottom = 10.0
 script = ExtResource("1_qr26j")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=204136606]
-position = Vector2(573.99994, 324)
-scale = Vector2(0.41818178, 0.4205729)
+position = Vector2(575.99994, 323.99997)
+scale = Vector2(0.4189091, 0.42187497)
 texture = ExtResource("2_68r4c")
 
 [node name="Start" type="Button" parent="." unique_id=2140730552]

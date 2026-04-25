@@ -4,7 +4,6 @@ class_name Player
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 
-
 enum PlayerMode{
 	SMALL,
 	BIG,
@@ -62,6 +61,8 @@ func _physics_process(delta):
 	update_animation(direction)
 	
 	move_and_slide()
+	
+
 	
 func update_animation(direction):
 	# 1. Define o prefixo baseado no modo atual
@@ -133,3 +134,4 @@ func die():
 func _on_death_zone_body_entered(body):
 	if body == self and not is_dead:
 		die()
+	
