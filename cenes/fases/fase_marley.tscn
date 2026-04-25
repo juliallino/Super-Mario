@@ -4,6 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://bppu28ou7jej" path="res://cenes/player.tscn" id="2_pfann"]
 [ext_resource type="Script" uid="uid://mryxqmbh5iwh" path="res://cenes/DeathZone.gd" id="3_qyoxe"]
 [ext_resource type="Script" uid="uid://da3fc8geve45q" path="res://cenes/passa_de_fase.gd" id="4_5dt7p"]
+[ext_resource type="PackedScene" uid="uid://b3a8cle76ueyp" path="res://cenes/koopa.tscn" id="5_qyoxe"]
+[ext_resource type="PackedScene" uid="uid://ddrh6bv1u070v" path="res://cenes/goomba.tscn" id="6_5dt7p"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gbo7l"]
 texture = ExtResource("1_2ejn4")
@@ -3959,6 +3961,56 @@ next_scene = "res://cenes/fases/fase_vinicius.tscn"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PassaDeFase" unique_id=1019086585]
 position = Vector2(-4.25, 30)
 shape = SubResource("RectangleShape2D_6bpjw")
+
+[node name="Enemies" type="Node" parent="." unique_id=671196960]
+
+[node name="Koopa" parent="Enemies" unique_id=1228283306 instance=ExtResource("5_qyoxe")]
+position = Vector2(3332, 559)
+
+[node name="Goomba" parent="Enemies" unique_id=1549919603 instance=ExtResource("6_5dt7p")]
+position = Vector2(4037, 563)
+horizontal_speed = 20.0
+vertical_speed = 100.0
+
+[node name="Koopa2" parent="Enemies" unique_id=1173960547 instance=ExtResource("5_qyoxe")]
+position = Vector2(4544, 559)
+
+[node name="Goomba2" parent="Enemies" unique_id=1231626334 instance=ExtResource("6_5dt7p")]
+position = Vector2(3036, 562)
+horizontal_speed = 20.0
+vertical_speed = 100.0
+
+[node name="Goomba3" parent="Enemies" unique_id=1875139857 instance=ExtResource("6_5dt7p")]
+position = Vector2(1681, 561)
+horizontal_speed = 20.0
+vertical_speed = 100.0
+
+[node name="Koopa3" parent="Enemies" unique_id=878359019 instance=ExtResource("5_qyoxe")]
+position = Vector2(2251, 560)
+
+[node name="Goomba4" parent="Enemies" unique_id=1387828519 instance=ExtResource("6_5dt7p")]
+position = Vector2(598, 498)
+horizontal_speed = 20.0
+vertical_speed = 100.0
+
+[node name="Koopa4" parent="Enemies" unique_id=1858763690 instance=ExtResource("5_qyoxe")]
+position = Vector2(1061, 559)
+
+[node name="Koopa5" parent="Enemies" unique_id=946898045 instance=ExtResource("5_qyoxe")]
+position = Vector2(250, 558)
+
+[node name="Goomba5" parent="Enemies" unique_id=1135075387 instance=ExtResource("6_5dt7p")]
+position = Vector2(128, 560)
+horizontal_speed = 20.0
+vertical_speed = 100.0
+
+[node name="Koopa6" parent="Enemies" unique_id=1122776364 instance=ExtResource("5_qyoxe")]
+position = Vector2(5460, 376)
+
+[node name="Goomba6" parent="Enemies" unique_id=708770231 instance=ExtResource("6_5dt7p")]
+position = Vector2(6152, 562)
+horizontal_speed = 20.0
+vertical_speed = 100.0
 
 [connection signal="body_entered" from="DeathZone" to="Player" method="_on_death_zone_body_entered"]
 [connection signal="body_entered" from="PassaDeFase" to="PassaDeFase" method="_on_body_entered"]
