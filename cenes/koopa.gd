@@ -25,7 +25,3 @@ func on_stomp(player_position: Vector2):
 
 	var movement_direction = 1 if player_position.x <= global_position.x else -1
 	horizontal_speed = -movement_direction * slide_speed
-
-
-func _on_visible_on_screen_enabler_2d_screen_exited():
-	pass # Replace with function body.

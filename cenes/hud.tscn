@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://dyfmm8brhdgc8"]
+
+[ext_resource type="Texture2D" uid="uid://coo75u7xx4aaq" path="res://Assets/coracao.png" id="1_qxwqb"]
+
+[node name="HUD" type="CanvasLayer" unique_id=480534163]
+
+[node name="PainelDurante" type="Node" parent="." unique_id=1132154300]
+
+[node name="Placar" type="Label" parent="PainelDurante" unique_id=2096257644]
+anchors_preset = -1
+anchor_right = 0.034722224
+anchor_bottom = 0.03549383
+offset_left = 1049.0
+offset_top = 44.0
+offset_right = 1049.0
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BoxContainer" type="BoxContainer" parent="PainelDurante" unique_id=372108377]
+anchors_preset = -1
+anchor_left = 0.25694445
+anchor_top = 0.0030864198
+anchor_right = 0.29166666
+anchor_bottom = 0.06481481
+metadata/_edit_use_anchors_ = true
+
+[node name="Coracao3" type="Sprite2D" parent="PainelDurante/BoxContainer" unique_id=998789098]
+position = Vector2(805.99994, 25)
+scale = Vector2(2.0261567, 1.7700084)
+texture = ExtResource("1_qxwqb")
+
+[node name="Coracao2" type="Sprite2D" parent="PainelDurante/BoxContainer" unique_id=554787862]
+position = Vector2(742.6093, 25)
+scale = Vector2(2.1738322, 1.7418859)
+texture = ExtResource("1_qxwqb")
+
+[node name="Coracao1" type="Sprite2D" parent="PainelDurante/BoxContainer" unique_id=1129934906]
+position = Vector2(774.99994, 24.999998)
+scale = Vector2(2.125009, 1.7226563)
+texture = ExtResource("1_qxwqb")

@@ -21,7 +21,7 @@ const POINTS_LABEL_SCENE = preload("res://cenes/points_label.tscn")
 @export_group("Locomotion")
 @export var run_speed_damping = 0.5
 @export var speed = 300.0
-@export var jump_velocity = -400.0
+@export var jump_velocity = -500.0
 @export_group("")
 
 @export_group("Stomping Enemies")
@@ -133,3 +133,11 @@ func die():
 func _on_death_zone_body_entered(body):
 	if body == self and not is_dead:
 		die()
+
+
+func _on_death_zone_area_shape_entered(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
+	pass # Replace with function body.
+
+
+func _on_death_zone_area_entered(area: Area2D) -> void:
+	pass # Replace with function body.
