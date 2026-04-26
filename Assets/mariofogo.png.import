@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ipnak52sqkfm"
-path="res://.godot/imported/Goomba_Walk1.png-038fbdf8102c03742c0e7cdabf4aedd0.ctex"
+uid="uid://cltj0o8cmbxif"
+path="res://.godot/imported/mariofogo.png-6bbf71e8f311b211b115fe0a9a4dff29.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/enemies/Goomba_Walk1.png"
-dest_files=["res://.godot/imported/Goomba_Walk1.png-038fbdf8102c03742c0e7cdabf4aedd0.ctex"]
+source_file="res://Assets/mariofogo.png"
+dest_files=["res://.godot/imported/mariofogo.png-6bbf71e8f311b211b115fe0a9a4dff29.ctex"]
 
 [params]
 

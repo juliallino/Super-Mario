@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://j6o5pw3y6llt"]
+
+[ext_resource type="Script" uid="uid://vs7oceoivuud" path="res://cenes/fire_flower.gd" id="1_w7a4q"]
+[ext_resource type="Texture2D" uid="uid://dq1c2q2n0aj3n" path="res://Assets/fireflower.png" id="2_yhps3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yhps3"]
+size = Vector2(17, 20)
+
+[node name="FireFlower" type="Area2D" unique_id=603659936]
+collision_layer = 0
+script = ExtResource("1_w7a4q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2139330327]
+position = Vector2(5.5, 8)
+shape = SubResource("RectangleShape2D_yhps3")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1985923256]
+position = Vector2(5.404159, 8.489997)
+scale = Vector2(0.95958406, 1.1677781)
+texture = ExtResource("2_yhps3")

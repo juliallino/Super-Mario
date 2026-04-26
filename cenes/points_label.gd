@@ -6,6 +6,5 @@ func _ready():
 	label_tween.tween_property(self, "position", position + Vector2(0,-10), .4)
 	label_tween.tween_callback(queue_free)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+func definir_pontos(valor: int):
+	text = str(valor)

@@ -9,6 +9,7 @@ const KOOPA_SHELL_POSITION = Vector2(0, 5)
 var in_a_shell = false
 
 func _ready():
+	add_to_group("enemy")
 	collision_shape_2d.shape = KOOPA_FULL_SHAPE
 func die():
 	if !in_a_shell:

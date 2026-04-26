@@ -13,6 +13,8 @@ var can_turn = true
 
 func _process(delta):
 	position.x -= horizontal_speed * delta
+	if GameManager.estado != GameManager.GameState.JOGANDO:
+		return
 
 	# gravidade
 	if !ray_floor.is_colliding():

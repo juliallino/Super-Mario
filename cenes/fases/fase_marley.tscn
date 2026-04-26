@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://da3fc8geve45q" path="res://cenes/passa_de_fase.gd" id="4_5dt7p"]
 [ext_resource type="PackedScene" uid="uid://b3a8cle76ueyp" path="res://cenes/koopa.tscn" id="5_qyoxe"]
 [ext_resource type="PackedScene" uid="uid://ddrh6bv1u070v" path="res://cenes/goomba.tscn" id="6_5dt7p"]
+[ext_resource type="PackedScene" uid="uid://dyfmm8brhdgc8" path="res://cenes/hud.tscn" id="7_5dt7p"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gbo7l"]
 texture = ExtResource("1_2ejn4")
@@ -4011,6 +4012,8 @@ position = Vector2(5460, 376)
 position = Vector2(6152, 562)
 horizontal_speed = 20.0
 vertical_speed = 100.0
+
+[node name="HUD" parent="." unique_id=480534163 instance=ExtResource("7_5dt7p")]
 
 [connection signal="body_entered" from="DeathZone" to="Player" method="_on_death_zone_body_entered"]
 [connection signal="body_entered" from="PassaDeFase" to="PassaDeFase" method="_on_body_entered"]

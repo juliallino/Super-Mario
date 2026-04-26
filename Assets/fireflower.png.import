@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ipnak52sqkfm"
-path="res://.godot/imported/Goomba_Walk1.png-038fbdf8102c03742c0e7cdabf4aedd0.ctex"
+uid="uid://dq1c2q2n0aj3n"
+path="res://.godot/imported/fireflower.png-cf00d9ea8b562e056935aa4ac2c7bd94.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/enemies/Goomba_Walk1.png"
-dest_files=["res://.godot/imported/Goomba_Walk1.png-038fbdf8102c03742c0e7cdabf4aedd0.ctex"]
+source_file="res://Assets/fireflower.png"
+dest_files=["res://.godot/imported/fireflower.png-cf00d9ea8b562e056935aa4ac2c7bd94.ctex"]
 
 [params]
 

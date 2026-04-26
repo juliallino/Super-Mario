@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://b5qywwlbrv6ox"]
+
+[ext_resource type="Script" uid="uid://4j1glqmje18t" path="res://cenes/fireball.gd" id="1_hq6om"]
+[ext_resource type="Texture2D" uid="uid://cltj0o8cmbxif" path="res://Assets/mariofogo.png" id="2_63cjj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2n6nn"]
+radius = 6.0
+
+[node name="FireBall" type="Area2D" unique_id=1833479130]
+collision_layer = 64
+collision_mask = 6
+script = ExtResource("1_hq6om")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=765466084]
+shape = SubResource("CircleShape2D_2n6nn")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=428444579]
+position = Vector2(0, 1)
+texture = ExtResource("2_63cjj")

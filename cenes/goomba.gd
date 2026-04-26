@@ -1,5 +1,8 @@
 extends Enemy
 
+func _ready():
+	add_to_group("enemy")
+
 func die():
 	super.die()
 	set_collision_layer_value(3, false)

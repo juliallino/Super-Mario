@@ -12,6 +12,7 @@ func _process(delta: float) -> void:
 
 
 func _on_start_pressed() -> void:
+	GameManager.iniciar_jogo()
 	get_tree().change_scene_to_file("res://cenes/fases/fase_arthur.tscn")
 
 func _on_quit_pressed() -> void:
