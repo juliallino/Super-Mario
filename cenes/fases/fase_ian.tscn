@@ -1799,8 +1799,11 @@ texture_region_size = Vector2i(32, 32)
 1:27/0 = 0
 2:27/0 = 0
 3:27/0 = 0
+3:27/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 4:27/0 = 0
+4:27/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 5:27/0 = 0
+5:27/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 6:27/0 = 0
 7:27/0 = 0
 8:27/0 = 0
@@ -3946,7 +3949,7 @@ tile_map_data = PackedByteArray("AAAAABMAAgAKAAwAAAAAABQAAgAKAA0AAAAAABUAAgAKAA4
 tile_set = SubResource("TileSet_h2yge")
 
 [node name="Player" parent="." unique_id=548535145 instance=ExtResource("2_62mt5")]
-position = Vector2(5666, 584)
+position = Vector2(3115, 483)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=353791991]
 position = Vector2(35, 39)
