@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://oko7ug1ce37p"]
 
-[ext_resource type="Script" uid="uid://cb32aqaog3yo3" path="res://cenes/fases/fase_arthur.gd" id="1_ewhca"]
 [ext_resource type="Texture2D" uid="uid://bpsgcj5htptk8" path="res://Assets/Mario/mariotile.png" id="1_x07yl"]
 [ext_resource type="PackedScene" uid="uid://bppu28ou7jej" path="res://cenes/player.tscn" id="2_h1qhk"]
 [ext_resource type="Script" uid="uid://mryxqmbh5iwh" path="res://cenes/DeathZone.gd" id="3_203vp"]
 [ext_resource type="PackedScene" uid="uid://dyfmm8brhdgc8" path="res://cenes/hud.tscn" id="4_61rvo"]
 [ext_resource type="PackedScene" uid="uid://b3a8cle76ueyp" path="res://cenes/koopa.tscn" id="6_1d6b2"]
+[ext_resource type="Script" uid="uid://da3fc8geve45q" path="res://cenes/passa_de_fase.gd" id="7_1d6b2"]
 [ext_resource type="PackedScene" uid="uid://ddrh6bv1u070v" path="res://cenes/goomba.tscn" id="7_8lv7f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e3ei1"]
@@ -3891,8 +3891,10 @@ size = Vector2(133.5, 594)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0xucc"]
 size = Vector2(65, 350.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8lv7f"]
+size = Vector2(60, 32.5)
+
 [node name="Node2D" type="Node2D" unique_id=1888943992]
-script = ExtResource("1_ewhca")
 
 [node name="TileMap" type="TileMap" parent="." unique_id=529659999]
 position = Vector2(-7, 18)
@@ -3986,4 +3988,15 @@ position = Vector2(163, 523)
 horizontal_speed = 20.0
 vertical_speed = 100.0
 
+[node name="PassaDeFase" type="Area2D" parent="." unique_id=1009506636]
+position = Vector2(6614, 318)
+script = ExtResource("7_1d6b2")
+next_scene = "res://cenes/fases/fase_julia.tscn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PassaDeFase" unique_id=33342786]
+position = Vector2(3, 33)
+shape = SubResource("RectangleShape2D_8lv7f")
+
 [connection signal="body_entered" from="DeathZone" to="Player" method="_on_death_zone_body_entered"]
+[connection signal="body_entered" from="PassaDeFase" to="PassaDeFase" method="_on_body_entered"]
+[connection signal="body_exited" from="PassaDeFase" to="PassaDeFase" method="_on_body_exited"]
