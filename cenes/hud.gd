@@ -6,7 +6,7 @@ signal volta
 var fim_ativo = false
 
 func _ready():
-	process_mode = Node.PROCESS_MODE_ALWAYS  # 🔥 MUITO IMPORTANTE
+	process_mode = Node.PROCESS_MODE_ALWAYS  
 
 	GameManager.vidas_changed.connect(atualizar_vidas)
 	GameManager.pontos_changed.connect(atualizar_pontos)

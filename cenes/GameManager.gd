@@ -28,7 +28,6 @@ func _process(delta: float) -> void:
 		return
 
 	tempo -= delta
-	print("Tempo:", tempo)
 	
 	if tempo <= 0:
 		tempo = 0

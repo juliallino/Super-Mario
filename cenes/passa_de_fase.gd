@@ -1,5 +1,4 @@
 extends Area2D
-
 @export var next_scene: String
 var player_on_top: Player = null
 
@@ -17,4 +16,9 @@ func _physics_process(delta):
 			enter_pipe()
 
 func enter_pipe():
-	get_tree().change_scene_to_file(next_scene)
+	print("Next scene: '", next_scene, "'")
+	if next_scene == "":
+		print("Chamando vencer!")
+		GameManager.vencer()
+	else:
+		get_tree().change_scene_to_file(next_scene)

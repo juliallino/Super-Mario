@@ -93,14 +93,20 @@ offset_bottom = 677.0
 color = Color(1, 1, 0.62352943, 0.5411765)
 
 [node name="Mensagem" type="Label" parent="PainelFimDeJogo" unique_id=1715992308]
-layout_mode = 0
-offset_left = 501.0
-offset_top = 303.0
-offset_right = 641.0
-offset_bottom = 345.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 400.0
+offset_top = 288.0
+offset_right = 741.0
+offset_bottom = 330.0
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.9411765, 0.33333334, 0.34509805, 1)
 theme_override_font_sizes/font_size = 30
-text = "VICTORY !"
+text = "Parabéns! Você venceu!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
