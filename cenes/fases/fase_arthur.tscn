@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://oko7ug1ce37p"]
 
+[ext_resource type="Script" uid="uid://0y5nfts3pygt" path="res://ESPController.gd" id="1_8lv7f"]
 [ext_resource type="Texture2D" uid="uid://bpsgcj5htptk8" path="res://Assets/Mario/mariotile.png" id="1_x07yl"]
 [ext_resource type="PackedScene" uid="uid://bppu28ou7jej" path="res://cenes/player.tscn" id="2_h1qhk"]
 [ext_resource type="Script" uid="uid://mryxqmbh5iwh" path="res://cenes/DeathZone.gd" id="3_203vp"]
@@ -3895,6 +3896,7 @@ size = Vector2(65, 350.5)
 size = Vector2(60, 32.5)
 
 [node name="Node2D" type="Node2D" unique_id=1888943992]
+script = ExtResource("1_8lv7f")
 
 [node name="TileMap" type="TileMap" parent="." unique_id=529659999]
 position = Vector2(-7, 18)
